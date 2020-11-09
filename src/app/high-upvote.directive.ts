@@ -1,13 +1,4 @@
-// import { Directive } from '@angular/core';
 
-// @Directive({
-//   selector: '[appHighUpvote]'
-// })
-// export class HighUpvoteDirective {
-
-//   constructor() { }
-
-// }
 import { Directive,ElementRef,Input } from '@angular/core';
 @Directive({
   selector: '[appHighUpvote]'

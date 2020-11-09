@@ -12,7 +12,7 @@
           <li style="background-color: wheat;">{{quote.name}} due on {{quote.completeDate|date|uppercase}}</li>
           <h2 *ngIf="quote === highestUpVote()" appHighUpvote><strong>Highest Likes.</strong> </h2>
          
-          <!-- <app-toggle-details *ngIf='quote.showDescription' [quote]='quote'></app-toggle-details> -->
+          <li style="background-color: wheat;">submitted by:{{quote.sname}} due on {{quote.completeDate|date|uppercase}}</li>
           <div *ngIf='quote.showDescription'>
             <app-toggle-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-toggle-details>
           </div>
