@@ -9,6 +9,7 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesFormComponent } from './quotes-form/quotes-form.component';
 import { ToggleDetailsComponent } from './toggle-details/toggle-details.component';
 import { DateCountPipe } from './date-count.pipe';
+import { HighUpvoteDirective } from './high-upvote.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DateCountPipe } from './date-count.pipe';
     QuotesComponent,
     QuotesFormComponent,
     ToggleDetailsComponent,
-    DateCountPipe
+    DateCountPipe,
+    HighUpvoteDirective
   ],
   imports: [
     BrowserModule,
