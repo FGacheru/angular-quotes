@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form>
+
+    </div>
+    <div class="col-md-8" style="padding: 50px;">
+     
+      <ul>
+        <div *ngFor='let quote of quotes;let i = index' style="padding: 20px;">
+          <button (click)='toggleDetails(i)' style="background-color: yellowgreen;">Show Quote Details</button>
+          <li style="background-color: wheat;">{{quote.name}} due on {{quote.completeDate|date|uppercase}}</li>
+          <h2 *ngIf="quote === highestUpVote()" appHighUpvote><strong>Highest Likes.</strong> </h2>
+         
+          <!-- <app-toggle-details *ngIf='quote.showDescription' [quote]='quote'></app-toggle-details> -->
+          <div *ngIf='quote.showDescription'>
+            <app-toggle-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-toggle-details>
+          </div>
+
+          <!-- <div class="col-md-6"> -->
+          <!-- <app-quotes-form (addQuote)="addNewQuote($event)"></app-quotes-form> -->
+
+          <button class="btn btn-outline-success" (click)="upvotes(i)">Likes {{quote.like}}</button>
+          <button class="btn btn-outline-primary" (click)="downvotes(i)">Dislikes{{quote.unlike}}</button>
+        </div>
+      </ul>
+    </div>
+  
+
+  </div>
+  <p *ngIf='quotes.length > 5'>You have too many goals</p>
+</div>
