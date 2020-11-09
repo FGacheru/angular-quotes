@@ -7,7 +7,7 @@ By  Francis Gacheru.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
 
-<!-- ## Description of Quotes Independent Project
+## Description of Quotes Independent Project
 The Quotes Angular application allows users to create quotes and have those quotes voted on whether they are terrible or are inspirational.
  
 ## project Set up Instructions
@@ -50,4 +50,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### License
 * Licensed under the MIT license
-Copyright (c) [2020] (Francis Gacheru) -->
+Copyright (c) [2020] (Francis Gacheru)
